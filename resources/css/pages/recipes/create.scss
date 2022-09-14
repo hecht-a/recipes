@@ -1,0 +1,59 @@
+.create__recipe {
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: space(1.4);
+    max-width: 70%;
+    margin: auto;
+
+    & > div {
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: row;
+
+      > div {
+        flex-direction: column;
+      }
+
+      .ingredients {
+        .add__ingredient {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            @include rounded-border;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+            line-height: 1em;
+            gap: space(2);
+            padding: space(2);
+            position: relative;
+            background: var(--light-green);
+            border: none;
+
+            span {
+              font-size: 2em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    margin: auto;
+  }
+}

@@ -1,0 +1,13 @@
+@layout('defaults/index')
+
+@section('body')
+<div class="recipes">
+  @each(recipe in recipes)
+    @!component("components/recipe", {
+        type: 'veggie',
+        text: 'veggie',
+        recipe
+    })
+  @end
+</div>
+@end

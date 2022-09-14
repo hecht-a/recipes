@@ -1,0 +1,25 @@
+@layout('defaults/index')
+
+@section('body')
+<div class="show__recipe">
+  <div class="recipe__thumbnail">
+    <img src="https://img.hellofresh.com/c_fill,f_auto,fl_lossy,h_432,q_auto,w_768/hellofresh_s3/image/burger-pulled-pork-cheddar-0ec52a89.jpg" />
+  </div>
+  <div class="recipe__body">
+      <div class="recipe__title">
+        <h2>{{ recipe.label }}</h2>
+      </div>
+      <div class="recipe__description">
+        <p>{{ recipe.description }}</p>
+      </div>
+    </div>
+    <div class="recipe__actions">
+      <div class="recipe_tags">
+        @!component("components/tag", {
+          type: "veggie",
+          text: "veggie"
+        })
+      </div>
+    </div>
+</div>
+@end

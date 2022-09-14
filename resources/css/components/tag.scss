@@ -1,0 +1,60 @@
+.tag {
+  background: var(--default);
+  align-items: center;
+  border-radius: space();
+  color: hsl(0, 0%, 29%);
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+
+  &.bordered {
+    border: 1px solid var(--border);
+  }
+
+  &.veggie {
+    background: var(--veggie);
+    color: var(--default);
+  }
+
+  &.calorie-smart {
+    background: var(--calorie-smart);
+    color: var(--default);
+  }
+
+  &.rapido {
+    background: var(--rapido);
+  }
+
+  &.familiales {
+    background: var(--familiales);
+    color: var(--default);
+  }
+
+  &.poissons-legumes {
+    background: var(--poissons-legumes);
+    color: var(--default);
+  }
+
+  &.premium-festin {
+    background: var(--premium-festin);
+    color: var(--default);
+  }
+
+  &.monde {
+    background: var(--monde);
+    color: var(--default);
+  }
+
+  &.dessert {
+    background: var(--dessert);
+  }
+
+  &.extra {
+    background: var(--extra);
+  }
+}

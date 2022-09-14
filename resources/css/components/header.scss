@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  background: var(--header-background);
+  border-bottom: 1px solid var(--medium-green);
+  padding: 0 space(4);
+
+  nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    list-style-type: none;
+    gap: space(2);
+
+    li a {
+      &:hover:not(.btn) {
+        text-decoration: underline;
+      }
+    }
+  }
+}

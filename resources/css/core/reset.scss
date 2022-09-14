@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "asap";
+  src: url("../../fonts/Asap-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "asap";
+  src: url("../../fonts/Asap-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "mplus";
+  src: url("../../fonts/MPLUSRounded1c-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "mplus";
+  src: url("../../fonts/MPLUSRounded1c-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+html,
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  color: var(--font);
+  font-family: "asap", sans-serif;
+  background-color: var(--light-grey);
+}
+
+a,
+button,
+input,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: var(--font);
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+main {
+  width: var(--width);
+  min-height: calc(100vh - var(--header-height) * 2);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: space(2);
+
+  & > div {
+    padding: space(4) 0;
+  }
+}

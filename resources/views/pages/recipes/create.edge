@@ -1,0 +1,40 @@
+@layout('defaults/index')
+
+@section('body')
+  <div class="create__recipe">
+    <form
+      data-units="{{ stringify(units.map(({id, label, shortLabel}) => ({id, label, shortLabel}))) }}"
+      data-ingredients="{{ stringify(ingredients.map(({id, label}) => ({id, label}))) }}"
+      action="{{route('SaveRecipeController.saveRecipeAction') }}"
+      method="post"
+    >
+      <div class="form">
+        <div>
+          <div>
+            <label>Nom</label>
+            <input name="label" id="label" type="text" class="form__control" />
+          </div>
+          <div>
+            <label>Catégorie</label>
+            <select class="form__control form__select">
+              @each(category in categories)
+              <option value="{{ category.id }}">{{ category.label }}</option>
+              @end
+            </select>
+          </div>
+        </div>
+        <div class="ingredients">
+          @!component('components/rowIngredient', {
+          units,
+          ingredients
+          })
+          <div class="add__ingredient" x-data="add_ingredient">
+            <button type="button" @click="add"><span>+</span>Ajouter un ingrédient</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn" type="submit">Enregistrer</button>
+    </form>
+  </div>
+  @end

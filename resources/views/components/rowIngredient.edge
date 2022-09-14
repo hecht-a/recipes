@@ -1,0 +1,21 @@
+<div>
+  <div>
+    <label>Nom</label>
+    <select name="ingredient-1" id="ingredient-1" class="form__control form__select">
+      @each(ingredient in ingredients)
+      <option value="{{ ingredient.id }}">{{ ingredient.label }}</option>
+      @end
+    </select>
+  </div>
+  @include('components/quantity')
+  <div class="unit">
+    <select name="unit-1" id="unit-1" class="form__control form__select">
+      @each(unit in units)
+      <option value="{{ unit.id }}">{{ unit.label }} ({{ unit.shortLabel  }})</option>
+      @end
+    </select>
+  </div>
+  <div>
+    <button id="delete__row" type="button">Delete</button>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+// functions
+@import 'functions/space';
+
+// mixins
+@import 'mixins/rounded-border';
+
+// core
+@import 'core/variables';
+@import 'core/reset';
+
+// components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/recipe';
+@import 'components/tag';
+@import 'components/category';
+@import 'components/categories';
+@import 'components/quantity';
+
+// modules
+@import 'modules/form';
+
+// pages
+@import 'pages/home';
+@import 'pages/recipes/create';
+@import 'pages/recipes/show';
+
+.btn {
+  padding: space(1.2);
+  background: var(--dark-orange);
+  border-radius: space(2);
+  border: none;
+  color: var(--default);
+  transition: all .2s;
+
+  &:hover {
+    background: var(--light-orange);
+    color: var(--dark-green)
+  }
+}

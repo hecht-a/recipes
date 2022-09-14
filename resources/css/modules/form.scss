@@ -1,0 +1,24 @@
+form {
+  & > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: space(2);
+
+    .form__control {
+      @include rounded-border;
+      padding: space();
+      font-size: 1em;
+    }
+
+    .form__select {
+      width: 100%;
+      padding: space() calc(#{space()}*4) space() space();
+      appearance: none;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+      background-repeat: no-repeat;
+      background-size: 16px 12px;
+      background-position: right space() center;
+    }
+  }
+}
